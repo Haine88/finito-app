@@ -1,0 +1,160 @@
+.welcome-page {
+  min-height: 100vh;
+  background-image: url('../assets/images/background.gif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Falling leaves overlay */
+.falling-leaves {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.falling-leaves img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.7;
+}
+
+.welcome-content {
+  width: 100%;
+  max-width: 580px;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+}
+
+.welcome-card {
+  background-image: url('../assets/images/intro-box.jpg');
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  padding: 80px 50px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.rabbit-top {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+.rabbit-top img {
+  width: 120px;
+  height: auto;
+  animation: hop 2s ease-in-out infinite;
+}
+
+@keyframes hop {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.welcome-card h3 {
+  font-size: 20px;
+  color: #8b4513;
+  margin-bottom: 25px;
+  font-family: 'Jersey 25', cursive;
+  text-align: left;
+  margin-top: 30px;
+  text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.5);
+}
+
+.welcome-card p {
+  font-size: 20px;
+  color: #8b4513;
+  line-height: 1.6;
+  margin-top: 10px;
+  text-align: left;
+  font-family: 'Jersey 25', cursive;
+}
+
+.begin-btn {
+  background-image: url('../assets/images/bamboo-button.png');
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  width: 320px;
+  height: 120px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: 'Jersey 25', cursive;
+  font-size: 36px;
+  font-weight: bold;
+  color: #8b4513;
+  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.7);
+  margin-top: 20px;
+}
+
+.begin-btn:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+.begin-btn:active {
+  transform: scale(0.98);
+}
+
+.rabbit-decoration {
+  position: fixed;
+  bottom: 10px;
+  left: 100px;
+  z-index: 3;
+}
+
+.rabbit-decoration img {
+  width: 180px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .welcome-card {
+    padding: 60px 40px;
+  }
+  
+  .welcome-card h1 {
+    font-size: 32px;
+  }
+  
+  .welcome-card p {
+    font-size: 18px;
+  }
+  
+  .begin-btn {
+    width: 220px;
+    height: 75px;
+    font-size: 30px;
+  }
+  
+  .rabbit-decoration img {
+    width: 120px;
+  }
+}
